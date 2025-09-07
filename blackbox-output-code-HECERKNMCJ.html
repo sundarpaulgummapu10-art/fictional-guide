@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditPro - Professional Editing Services for Indian Creators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDUiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxnIGZpbGw9IiNmY2Y1MDUiIGZpbGwtb3BhjRCMUY2ZGMiIGZpbGwtcnVsZT0iRVZlIj48cATHIGQ9Ik0wIDBoMTVzMTAgNCAxNSAxMlMxMCA1MCAwIDUwVjBoWiIvPgKnJz4KPHN2Z855');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .portfolio-item {
+            transition: filter 0.3s ease;
+        }
+        .portfolio-item:hover {
+            filter: brightness(1.1) saturate(1.2);
+        }
+        .scroll-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-size: cover;
+            }
+            .grid-cols-1 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header class="bg-white shadow-lg fixed top-0 w-full z-50 fade-in">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-blue-600">EditPro</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#packages" class="hover:text-blue-600 transition">Packages</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#hero" class="block px-6 py-2 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-6 py-2 hover:bg-gray-100">About</a>
+            <a href="#packages" class="block px-6 py-2 hover:bg-gray-100">Packages</a>
+            <a href="#portfolio" class="block px-6 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="#contact" class="block px-6 py-2 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-bg text-white pt-24 pb-16">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Elevate Your Vids with EditPro</h1>
+            <p class="text-xl md:text-2xl mb-8">Affordable video editing services for Indian creators, beginners welcome!</p>
+            <button class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full text-xl font-semibold transition transform hover:scale-105 scroll-btn">Get Started</button>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">About EditPro</h2>
+                <p class="text-lg text-gray-600 mt-4">Crafting cinematic stories from raw footage, tailored for Indian markets since 2023.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/51f115bd-d555-4b0f-b3de-078c1bd8981e.png" alt="A professional video editor at work in a modern studio setting with multiple monitors displaying vibrant video footage being edited, surrounded by creative tools like a keyboard with stickers, headphones, and a notebook with storyboards" class="rounded-lg shadow-lg" onload="this.style.display='block';" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <div style="display:none;" class="bg-gray-200 rounded-lg shadow-lg p-8 text-center">
+                        <p>Image of professional video editing setup</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed">As a beginner-friendly video editor based in India, I understand the challenges of starting out. Whether it's wedding videos, YouTube content, or personal projects, I'll work closely with you to create engaging edits that fit your budget and vision.</p>
+                    <p class="text-lg leading-relaxed">Using the latest software and techniques, I deliver high-quality results with flexible turnarounds. Let's make your raw footage shine!</p>
+                    <p class="text-lg leading-relaxed"><strong>Contact me:</strong> +91 XXXX-XXXXXX | email@example.com</p>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">Our Beginner-Friendly Packages</h2>
+                <p class="text-lg text-gray-300 mt-4">Affordable plans designed for clients and creators in India. All prices in INR (inclusive of GST).</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Basic Edit</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-4">₹2,500</p>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                        <li>Up to 5 minutes of footage</li>
+                        <li>Color correction and grading</li>
+                        <li>Basic transitions and cuts</li>
+                        <li>Free revisions</li>
+                        <li>Turnaround in 3-5 days</li>
+                    </ul>
+                    <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition w-full">Book Now</button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center transform scale-105 border-2 border-orange-500">
+                    <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold absolute -top-3">Most Popular</span>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Standard Edit</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-4">₹6,000</p>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                        <li>Up to 10 minutes of footage</li>
+                        <li>Advanced color grading</li>
+                        <li>Sound design and music sync</li>
+                        <li>Intro/outro creation</li>
+                        <li>2 free revisions</li>
+                        <li>Turnaround in 5-7 days</li>
+                    </ul>
+                    <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition w-full">Book Now</button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Premium Edit</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-4">₹12,000</p>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                        <li>Unlimited footage (under 20 min)</li>
+                        <li>Full creative direction</li>
+                        <li>Advanced effects and graphics</li>
+                        <li>Professional audio mastering</li>
+                        <li>3 free revisions + consultation</li>
+                        <li>Express turnaround in 3 days</li>
+                    </ul>
+                    <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition w-full">Book Now</button>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-white text-sm">* All packages include source files (if requested) and unlimited call/chat support. Payment via UPI/GPay/PhonePe for easy transactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">Our Portfolio</h2>
+                <p class="text-lg text-gray-600 mt-4">Showcasing our editing mastery for Indian clients.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="portfolio-item bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e867f075-e736-4409-b57a-b1b0656b61b6.png" alt="Cinematic drone shot of a majestic mountain landscape at sunset with golden hues, dramatic clouds, and a winding river" class="w-full h-48 object-cover" onload="this.style.display='block';" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <div style="display:none;" class="bg-gray-200 w-full h-48 flex items-center justify-center">Portfolio Image 1 Placeholder</div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Travel Vlog Edit</h3>
+                        <p class="text-sm text-gray-600">Dynamic travel video with custom music.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d61a8d03-6e91-467a-a0b2-cd7306e4b0c1.png" alt="Elegant wedding ceremony captured in soft focus with floral decorations, bride in white dress, groom in suit, sunlight through stained glass, romantic atmosphere" class="w-full h-48 object-cover" onload="this.style.display='block';" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <div style="display:none;" class="bg-gray-200 w-full h-48 flex items-center justify-center">Portfolio Image 2 Placeholder</div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Wedding Highlight</h3>
+                        <p class="text-sm text-gray-600">Emotional montage for a Mumbai wedding.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/37248eb9-d9b3-4eee-ad58-c76555933f1f.png" alt="Dynamic commercial advertisement featuring a sleek sports car speeding through an urban skyline at dusk with neon lights, fast motion editing style" class="w-full h-48 object-cover" onload="this.style.display='block';" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <div style="display:none;" class="bg-gray-200 w-full h-48 flex items-center justify-center">Portfolio Image 3 Placeholder</div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">YouTube Short</h3>
+                        <p class="text-sm text-gray-600">High-energy edit for social media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">Get in Touch</h2>
+                <p class="text-lg text-gray-300 mt-4">Ready to start your project? Let's connect!</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form id="contact-form">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" id="name" placeholder="Your Name" class="border-2 border-gray-300 p-3 rounded-lg focus:outline-none focus:border-blue-500" required>
+                        <input type="email" id="email" placeholder="Your Email" class="border-2 border-gray-300 p-3 rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <input type="tel" id="phone" placeholder="Your Phone (Optional) - For WhatsApp chats" class="border-2 border-gray-300 p-3 rounded-lg w-full focus:outline-none focus:border-blue-500 mb-6">
+                    <textarea id="message" rows="6" placeholder="Tell us about your project, timeline, and any special requirements..." class="border-2 border-gray-300 p-3 rounded-lg w-full focus:outline-none focus:border-blue-500 mb-6" required></textarea>
+                    <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg w-full transition transform hover:scale-105">Send Inquiry</button>
+                </form>
+                <div class="mt-6 text-center text-gray-600">
+                    <p>Prefer to chat? <a href="https://wa.me/91XXXXXXXXXX" class="text-blue-500 hover:underline">WhatsApp me directly!</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 EditPro. Based in India, serving creators worldwide. All rights reserved.</p>
+            <p class="mt-2">Affordable rates, professional quality. Let's collaborate!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, #mobile-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+                if (window.innerWidth < 768) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handler (client-side only)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Simulate form submission (in a real app, send to backend or email)
+            const contactMethod = phone ? `or call/text at ${phone}` : '';
+            alert(`Thank you for your message, ${name}! We will respond to you at ${email} ${contactMethod} soon. (For real setup, integrate with backend service like PHP or Netlify forms.)`);
+            
+            // Clear form
+            this.reset();
+        });
+        
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
